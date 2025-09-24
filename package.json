@@ -1,0 +1,22 @@
+{
+  "name": "ai-content-generation-platform",
+  "version": "1.0.0",
+  "description": "AI-powered content generation platform using LLMs",
+  "author": "Jessie Borras <contact@jessiedev.xyz>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "npm run start:backend",
+    "start:backend": "cd backend && npm start",
+    "db:migrate": "cd backend && npm run db:migrate",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
